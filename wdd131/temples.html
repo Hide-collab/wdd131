@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Mobile First CSS -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Temple Album</h1>
+
+        <button id="menu" aria-label="Menu">☰</button>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Featured Temples</h2>
+
+        <section class="container">
+            <!-- 9 figures -->
+            <figure><img src="images/durban-temple.jpg" alt="Durbun South Africa Temple">
+                <figcaption>Temple One</figcaption>
+            </figure>
+            <figure><img src="images/ghana-temple.jpg" alt="Ghana Acra Temple">
+                <figcaption>Temple Two</figcaption>
+            </figure>
+            <figure><img src="images/harare-zimbabwe-temple.jpg" alt="Harare Zimbabwe Temple">
+                <figcaption>Temple Three</figcaption>
+            </figure>
+            <figure><img src="images/lubumbashi-drc-temple.jpg" alt="Lumumbashi DRC Temple">
+                <figcaption>Temple Four</figcaption>
+            </figure>
+            <figure><img src="images/red-cliffs-utah-temple.jpg" alt="Red Cliff Utah Temple">
+                <figcaption>Temple Five</figcaption>
+            </figure>
+            <figure><img src="images/taylorsville-utah-temple.jpg" alt="Taylorsville Utah Temple">
+                <figcaption>Temple Six</figcaption>
+            </figure>
+            <figure><img src="images/st-george-utah-temple.jpg" alt="St George Utah Temple">
+                <figcaption>Temple Seven</figcaption>
+            </figure>
+            <figure><img src="images/syracuse-utah-temple.jpg" alt="Syracuse Utah Temple">
+                <figcaption>Temple Eight</figcaption>
+            </figure>
+            <figure><img src="images/saltlake-city-temple.jpg" alt="SaltLake City Temple">
+                <figcaption>Temple Nine</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> | Hide Vhunzawabaya | Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
