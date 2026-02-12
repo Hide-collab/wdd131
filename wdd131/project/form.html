@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review form page for submitting product ratings and feedback.">
+    <meta name="author" content="Hide Vhunzawabaya">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Product Review Form</h1>
+        <p>Please submit your review for the product you installed.</p>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" id="reviewForm">
+
+            <!-- Product Name -->
+            <label for="productSelect">Product Name *</label>
+            <select id="productSelect" name="product" required>
+                <option disabled selected>Select a Product ...</option>
+                <!-- Options populated dynamically by JS -->
+            </select>
+
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating *</legend>
+                <label>
+                    <input type="radio" name="rating" value="1" required> 1 ☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="2"> 2 ☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="3"> 3 ☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="4"> 4 ☆
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="5"> 5 ☆
+                </label>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <label for="installDate">Date of Installation *</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Useful Features (check all that apply)</legend>
+                <label><input type="checkbox" name="features" value="Durable"> Durable</label>
+                <label><input type="checkbox" name="features" value="Easy to Install"> Easy to Install</label>
+                <label><input type="checkbox" name="features" value="Energy Efficient"> Energy Efficient</label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <label for="reviewText">Written Review</label>
+            <textarea id="reviewText" name="reviewText" rows="4" placeholder="Write your review here..."></textarea>
+
+            <!-- User Name -->
+            <label for="userName">Your Name</label>
+            <input type="text" id="userName" name="userName" placeholder="Optional">
+
+            <!-- Submit -->
+            <input type="submit" value="Submit Review">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Product Reviews</p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
