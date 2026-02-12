@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F8F9FA;
+    color: #333;
+}
+
+header {
+    background-color: #1B3A57;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    color: #1B3A57;
+}
+
+.tagline {
+    color: #F4A261;
+}
+
+section {
+    padding: 1rem 2rem;
+}
+
+ul {
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #1B3A57;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Wireframe styling */
+.wireframe {
+    border: 2px dashed #1B3A57;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.box {
+    border: 1px solid #333;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    background-color: #e9ecef;
+}
+
+.row {
+    display: flex;
+    gap: 1rem;
+}
+
+.half {
+    flex: 1;
+}
+
+.full {
+    width: 100%;
+}
