@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Heritage Connect - Discover, document, and preserve your family history for future generations. Start your genealogy journey today.">
+    <meta name="author" content="Hide Vhunzawabaya">
+    <title>Heritage Connect - Preserving Family Stories for Future Generations</title>
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Heritage Connect</h1>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="research.html">Research Guide</a></li>
+                    <li><a href="submit.html">Submit Stories</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Preserving Family Stories for Future Generations</h2>
+                <p class="hero-subtitle">Connect with your roots, discover your heritage, and keep your family legacy
+                    alive</p>
+                <a href="research.html" class="cta-button">Start Your Journey</a>
+            </div>
+        </section>
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <div class="container">
+                <h2>Welcome to Heritage Connect</h2>
+                <p>Every family has a story worth preserving. Heritage Connect empowers you to discover, document, and
+                    share your family history with the tools, guidance, and community support you need to create a
+                    lasting legacy.</p>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="features">
+            <div class="container">
+                <h2>Why Heritage Connect?</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Educational Resources</h3>
+                        <p>Access comprehensive guides, research tips, and step-by-step tutorials to help you uncover
+                            your family's past.</p>
+                        <a href="research.html" class="feature-link">Learn More →</a>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">✍️</div>
+                        <h3>Story Preservation</h3>
+                        <p>Submit and store your family stories, memories, and historical documents in one secure place.
+                        </p>
+                        <a href="submit.html" class="feature-link">Submit Story →</a>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">🌳</div>
+                        <h3>Family Tree Builder</h3>
+                        <p>Visualize your genealogy with interactive family tree tools that bring your ancestry to life.
+                        </p>
+                        <a href="#tree-section" class="feature-link">Explore →</a>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Research Assistance</h3>
+                        <p>Get guidance on accessing records, conducting interviews, and organizing your findings
+                            effectively.</p>
+                        <a href="research.html" class="feature-link">Get Started →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Stories Section -->
+        <section class="recent-stories">
+            <div class="container">
+                <h2>Recent Family Stories</h2>
+                <div class="stories-container" id="storiesContainer">
+                    <!-- Stories will be dynamically loaded here -->
+                </div>
+                <div class="empty-state" id="emptyState">
+                    <p>No stories yet. Be the first to <a href="submit.html">share your family's story</a>!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Family Tree Section -->
+        <section class="tree-section" id="tree-section">
+            <div class="container">
+                <h2>Your Family Tree</h2>
+                <p class="tree-intro">Build and visualize your family connections. Click on members to see their
+                    details.</p>
+                <div class="tree-controls">
+                    <button class="tree-btn" id="addMemberBtn">+ Add Family Member</button>
+                    <button class="tree-btn secondary" id="clearTreeBtn">Clear Tree</button>
+                </div>
+                <div class="family-tree" id="familyTree">
+                    <!-- Tree will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Start Preserving Your Legacy Today</h2>
+                <p>Join thousands of families documenting their heritage and creating lasting memories.</p>
+                <a href="submit.html" class="cta-button">Share Your Story</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Heritage Connect</h3>
+                <p>Preserving family stories for future generations</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research Guide</a></li>
+                    <li><a href="submit.html">Submit Stories</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@heritageconnect.org</p>
+                <p>© 2026 Heritage Connect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
