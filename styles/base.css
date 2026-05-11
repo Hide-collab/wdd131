@@ -42,8 +42,8 @@ main {
 }
 
 .card {
-    border: 1px solid #ccc;
-    padding: 1rem;
+    border: 5px solid #ccc;
+    padding: 4rem;
 }
 
 footer {
