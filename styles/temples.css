@@ -1,0 +1,255 @@
+/* ============================================================
+   temples.css — Mobile-first base styles
+   Aesthetic: Editorial warmth, stone & gold tones, serif elegance
+   ============================================================ */
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  --clr-bg:        #f5f0e8;
+  --clr-surface:   #ede6d6;
+  --clr-header:    #1c1610;
+  --clr-text:      #2e2518;
+  --clr-muted:     #7a6a52;
+  --clr-accent:    #b5822a;
+  --clr-accent-lt: #d4a84b;
+  --clr-white:     #fdfaf4;
+  --clr-border:    #cfc3a8;
+
+  --ff-display: 'Cormorant Garamond', Georgia, serif;
+  --ff-body:    'Jost', sans-serif;
+
+  --radius:  6px;
+  --shadow:  0 4px 20px rgba(44, 33, 16, 0.12);
+  --trans:   0.25s ease;
+
+  --max-width: 1200px;
+  --gap: 1.25rem;
+}
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--ff-body);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: var(--clr-header);
+  color: var(--clr-white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  color: var(--clr-accent-lt);
+  font-size: 1.2rem;
+}
+
+.logo-text {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--clr-white);
+}
+
+/* Hamburger */
+#hamburger {
+  background: none;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: var(--clr-white);
+  font-size: 1.35rem;
+  cursor: pointer;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius);
+  line-height: 1;
+  transition: background var(--trans), border-color var(--trans);
+}
+
+#hamburger:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--clr-accent-lt);
+}
+
+/* Nav — hidden by default on mobile */
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.5rem 0 0.75rem;
+  gap: 0.1rem;
+}
+
+#nav-menu.open {
+  display: flex;
+}
+
+#nav-menu a {
+  font-family: var(--ff-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  transition: color var(--trans), background var(--trans);
+}
+
+#nav-menu a:hover {
+  color: var(--clr-accent-lt);
+  background: rgba(255,255,255,0.07);
+}
+
+/* ---------- Main ---------- */
+main {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 1.25rem 3rem;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 2rem 0 2.5rem;
+  border-bottom: 1px solid var(--clr-border);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--clr-text);
+  margin-bottom: 0.6rem;
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+  color: var(--clr-muted);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Gallery Grid — 1 column mobile ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+
+/* Figure card */
+figure {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--trans), box-shadow var(--trans);
+  cursor: default;
+}
+
+figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(44, 33, 16, 0.18);
+}
+
+/* Images fixed height for uniform cards */
+figure img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+figure:hover img {
+  transform: scale(1.04);
+}
+
+figcaption {
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-top: 2px solid var(--clr-accent);
+}
+
+.temple-name {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--clr-text);
+}
+
+.temple-meta {
+  font-size: 0.775rem;
+  color: var(--clr-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--clr-header);
+  color: rgba(255,255,255,0.65);
+  padding: 1.5rem 1.25rem;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.825rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-inner .last-modified {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem;
+}

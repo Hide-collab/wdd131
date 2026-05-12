@@ -1,0 +1,60 @@
+/* ============================================================
+   temples-large.css — Larger screen overrides
+   Loaded after temples.css; expands layout for wider viewports
+   ============================================================ */
+
+@media only screen and (min-width: 40rem) {
+
+  /* ---------- Header: show nav inline, hide hamburger ---------- */
+  #hamburger {
+    display: none;
+  }
+
+  #nav-menu {
+    display: flex !important;        /* override JS-toggled state */
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    padding: 0;
+    gap: 0.15rem;
+  }
+
+  #nav-menu a {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.85rem;
+  }
+
+  /* ---------- Gallery: 2 columns ---------- */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  figure img {
+    height: 240px;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+
+  /* ---------- Gallery: 3 columns ---------- */
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  figure img {
+    height: 260px;
+  }
+
+  /* Slightly larger hero */
+  .hero {
+    padding: 3rem 0 3rem;
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+
+  /* ---------- Gallery: auto-fit for ultra-wide ---------- */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}

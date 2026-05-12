@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Album</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" />
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">Temple Album</span>
+      </div>
+      <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="ham-icon">&#9776;</span>
+      </button>
+      <nav id="nav-menu">
+        <a href="#">Home</a>
+        <a href="#" data-filter="all">All</a>
+        <a href="#" data-filter="old">Old</a>
+        <a href="#" data-filter="new">New</a>
+        <a href="#" data-filter="large">Large</a>
+        <a href="#" data-filter="small">Small</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Hide Vhunzawabaya Temple Album</h1>
+      <p class="hero-sub">A collection of Holy temples across the world</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <figure data-category="old large">
+        <img src="images/ogden-utah.jpg"
+             alt="Ogden Utah="lazy" />
+        <figcaption>
+          <span class="temple-name">Ogden Utah</span>
+          <span class="temple-meta">ogden, Utah · January 1972</span>
+        </figcaption>
+      </figure>
+
+      <figure data-category="old large">
+        <img src="images/ghana-acara-temple.jpg"
+             alt="Ghana Acra Temple" loading="lazy" />
+        <figcaption>
+          <span class="temple-name">Ghana Acra Temple</span>
+          <span class="temple-meta">Acra, Ghana · 11 January 2004</span>
+        </figcaption>
+      </figure>
+
+      <figure data-category="old">
+        <img src="images/harare-zimbabwe-temple.jpg"
+             alt="Harare Zimbabwe Tempel" loading="lazy" />
+        <figcaption>
+          <span class="temple-name">Harare Zimbabwe </span>
+          <span class="temple-meta">Harare, Zimbabwe · March 2026  </span>
+        </figcaption>
+      </figure>
+
+      <figure data-category="new large">
+        <img src="images/johanisburg-temple.jpg"
+             alt="Johansburg" loading="lazy" />
+        <figcaption>
+          <span class="temple-name">Johansiburg Temple</span>
+          <span class="temple-meta">Johansburg Temple, South Africa · Augast 1985</span>
+        </figcaption>
+      </figure>
+
+      <figure data-category="old small">
+        <img src="images/kenya-nairobi-temple.jpg"
+             alt="Kenya Nairobi" loading="lazy" />
+        <figcaption>
+          <span class="temple-name">Kenya Nairobi</span>
+          <span class="temple-meta">Kenya, Nairobi · 20th Century</span>
+        </figcaption>
+      </figure>
+
+      <figure data-category="new">
+        <img src="images/utah-salt-lake.jpg"
+             alt="Sydney Temple"
+             onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/LDS_Temple_Salt_Lake_City.jpg/800px-LDS_Temple_Salt_Lake_City.jpg'"
+             loading="lazy" />
+        <figcaption>
+          <span class="temple-name">Utah, Salt Lake City>
+          <span class="temple-meta">Utah, Salt Lake · 1893</span>
+        </figcaption>
+      </figure>
+
+      <figure data-category="old large">
+        <img src="images/ogden-utah.jpg"
+             alt="Prambanan Temple" loading="lazy" />
+        <figcaption>
+          <span class="temple-name">Ogden Temple</span>
+          <span class="temple-meta">Ogden, Utah · January 1972</span>
+        </figcaption>
+      </figure>
+
+      <figure data-category="new small">
+        <img src="images/provo-utah.png"
+             alt="Provo, Utah" loading="lazy" />
+        <figcaption>
+          <span class="temple-name">Provo Utah Temple</span>
+          <span class="temple-meta">February  · 1972</span>
+        </figcaption>
+      </figure>
+
+      <figure data-category="old">
+        <img src="images/oakland-califonia.jpg"
+             alt="Oakland, Califonia" loading="lazy" />
+        <figcaption>
+          <span class="temple-name">Oakland, Califonia Temple</span>
+          <span class="temple-meta">Califonia, November  · 1964</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; <span id="current-year"></span> Temple Album &mdash; Hide Vhunzawabaya</p>
+      <p class="last-modified">Last Modified: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+
+</body>
+</html>
