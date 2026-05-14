@@ -5,7 +5,7 @@
  *  2. Hamburger menu toggle (mobile only)
  */
 
-// ─── 1. Footer dynamic content ───────────────────────────────────────────────
+// ─── 1. Footer dynamic content
 
 const yearSpan = document.getElementById('current-year');
 const modSpan  = document.getElementById('last-modified');
