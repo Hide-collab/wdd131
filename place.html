@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover Zimbabwe — the jewel of Africa, home to Victoria Falls, ancient ruins, and breathtaking wildlife." />
+  <title>Zimbabwe Jewel of Africa</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-inner">
+      <span class="flag-badge">🇿🇼</span>
+      <h1>Zimbabwe</h1>
+      <p class="tagline">Jewel of Africa</p>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <picture>
+      <!-- Wide viewport: landscape panorama feel -->
+      <source
+        srcset="images/zimbabwe-wide.webp"
+        media="(min-width: 768px)"
+      />
+      <!-- Mobile: portrait crop -->
+      <img
+        src="images/victoria-falls.jpg"
+        alt="Victoria Falls thundering into the Zambezi Gorge, Zimbabwe"
+        class="hero-img"
+        width="800"
+        height="500"
+        loading="eager"
+      />
+    </picture>
+    <div class="hero-caption">
+      <p>Victoria Falls — <em>Mosi-oa-Tunya</em>, "The Smoke That Thunders"</p>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- About -->
+    <section class="card about">
+      <h2>About Zimbabwe</h2>
+      <p>
+        Zimbabwe is a landlocked nation in southern Africa, bordered by Zambia, Mozambique,
+        South Africa, and Botswana. It is celebrated for Victoria Falls — one of the Seven
+        Natural Wonders of the World — as well as the ancient stone city of Great Zimbabwe,
+        vast wildlife reserves, and a rich cultural heritage spanning thousands of years.
+      </p>
+      <p>
+        The country covers approximately 390,757 km² and is home to around 15 million people
+        who speak over 16 languages, with Shona and Ndebele being the most widely spoken.
+        Harare is the vibrant capital city, while Bulawayo serves as the cultural heart of
+        the Ndebele people.
+      </p>
+    </section>
+
+    <!-- Gallery / Highlights -->
+    <section class="card highlights">
+      <h2>Highlights</h2>
+      <ul class="highlights-list">
+        <li>
+          <span class="icon"></span>
+          <div>
+            <strong>Victoria Falls</strong>
+            <p>The world's largest waterfall by combined width and height — 1,708 m wide and 108 m tall.</p>
+          </div>
+        </li>
+        <li>
+          <span class="icon"></span>
+          <div>
+            <strong>Great Zimbabwe Ruins</strong>
+            <p>A UNESCO World Heritage Site and the largest stone structure in sub-Saharan Africa, dating to the 11th century.</p>
+          </div>
+        </li>
+        <li>
+          <span class="icon"></span>
+          <div>
+            <strong>Hwange National Park</strong>
+            <p>Zimbabwe's largest game reserve, protecting over 100 mammal species including Africa's largest elephant population.</p>
+          </div>
+        </li>
+        <li>
+          <span class="icon">🎨</span>
+          <div>
+            <strong>Shona Stone Sculpture</strong>
+            <p>World-renowned for its Shona sculptors whose work is displayed in galleries across the globe.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Weather -->
+    <section class="card weather">
+      <h2 class="weather-heading">Weather</h2>
+      <div class="weather-grid">
+        <div class="weather-icon-mobile">
+          <!-- SVG weather icon for mobile -->
+          <img
+            src="images/partly-cloudy.svg"
+            alt="Partly cloudy weather icon"
+            class="weather-svg"
+            width="80"
+            height="80"
+          />
+        </div>
+        <div class="weather-details">
+          <p><strong>Location:</strong> Harare, Zimbabwe</p>
+          <p><strong>Condition:</strong> Partly Cloudy &amp; Warm</p>
+          <p><strong>Temperature:</strong> <span id="temperature">28</span> °C</p>
+          <p><strong>Wind Speed:</strong> <span id="wind-speed">15</span> km/h</p>
+          <p><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>
+      <span id="current-year"></span> &copy; Zimbabwe Country Page &nbsp;|&nbsp;
+      Last Modified: <span id="last-modified"></span>
+    </p>
+    <p class="footer-credit">
+      Photos: <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a> &amp;
+      <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> — Free to use
+    </p>
+  </footer>
+
+</body>
+</html>
