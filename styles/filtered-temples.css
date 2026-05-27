@@ -1,18 +1,28 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
-
 :root {
-  --cream:    #f5f0e8;
-  --gold:     #c9a84c;
-  --gold-lt:  #e8d08a;
-  --dark:     #1a1612;
-  --mid:      #3d3228;
-  --text:     #2e2820;
-  --muted:    #7a6e62;
-  --card-bg:  #ffffff;
-  --shadow:   0 4px 24px rgba(26,22,18,0.10);
-  --radius:   6px;
-  --transition: 0.25s ease;
+  --cream:        #f5f0e8;
+  --gold:         #c9a84c;
+  --gold-lt:      #e8d08a;
+  --dark:         #1a1612;
+  --mid:          #3d3228;
+  --text:         #2e2820;
+  --muted:        #7a6e62;
+  --card-bg:      #ffffff;
+  --gold-a40:     color-mix(in srgb, var(--gold) 40%, transparent);
+  --gold-a15:     color-mix(in srgb, var(--gold) 15%, transparent);
+  --gold-a12:     color-mix(in srgb, var(--gold) 12%, transparent);
+  --gold-a25:     color-mix(in srgb, var(--gold) 25%, transparent);
+  --cream-a75:    color-mix(in srgb, var(--cream) 75%, transparent);
+  --cream-a60:    color-mix(in srgb, var(--cream) 60%, transparent);
+  --cream-a55:    color-mix(in srgb, var(--cream) 55%, transparent);
+  --black-a35:    color-mix(in srgb, #000000 35%, transparent);
+  --black-a30:    color-mix(in srgb, #000000 30%, transparent);
+  --dark-a10:     color-mix(in srgb, var(--dark) 10%, transparent);
+  --dark-a16:     color-mix(in srgb, var(--dark) 16%, transparent);
+  --shadow:       0 4px 24px var(--dark-a10);
+  --shadow-hover: 0 12px 36px var(--dark-a16);
+  --radius:       6px;
+  --transition:   0.25s ease;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,7 +46,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.35);
+  box-shadow: 0 2px 16px var(--black-a35);
 }
 
 .header-inner {
@@ -58,16 +68,12 @@ header {
   white-space: nowrap;
 }
 
-.site-title span {
-  color: var(--gold);
-}
-
 nav { position: relative; }
 
 #hamburger {
   display: none;
   background: none;
-  border: 1px solid rgba(201,168,76,0.4);
+  border: 1px solid var(--gold-a40);
   border-radius: var(--radius);
   cursor: pointer;
   padding: 0.4rem 0.6rem;
@@ -77,7 +83,7 @@ nav { position: relative; }
   transition: background var(--transition);
 }
 
-#hamburger:hover { background: rgba(201,168,76,0.15); }
+#hamburger:hover { background: var(--gold-a15); }
 
 #nav-menu {
   display: flex;
@@ -93,13 +99,13 @@ nav { position: relative; }
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(245,240,232,0.75);
+  color: var(--cream-a75);
   text-decoration: none;
   border-radius: var(--radius);
   transition: color var(--transition), background var(--transition);
 }
 
-.nav-link:hover { color: var(--gold-lt); background: rgba(201,168,76,0.12); }
+.nav-link:hover { color: var(--gold-lt); background: var(--gold-a12); }
 .nav-link.active { color: var(--dark); background: var(--gold); font-weight: 500; }
 
 .hero-band {
@@ -125,7 +131,7 @@ nav { position: relative; }
 .hero-band p {
   margin-top: 0.75rem;
   font-size: 0.95rem;
-  color: rgba(245,240,232,0.6);
+  color: var(--cream-a60);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -184,12 +190,12 @@ main {
   display: flex;
   flex-direction: column;
   transition: transform var(--transition), box-shadow var(--transition);
-  border: 1px solid rgba(201,168,76,0.15);
+  border: 1px solid var(--gold-a15);
 }
 
 .temple-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 36px rgba(26,22,18,0.16);
+  box-shadow: var(--shadow-hover);
 }
 
 .card-image-wrap {
@@ -259,7 +265,7 @@ main {
 
 footer {
   background: var(--dark);
-  color: rgba(245,240,232,0.55);
+  color: var(--cream-a55);
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.8rem;
@@ -280,11 +286,11 @@ footer strong { color: var(--gold-lt); font-weight: 400; }
     right: 0;
     flex-direction: column;
     background: var(--mid);
-    border: 1px solid rgba(201,168,76,0.25);
+    border: 1px solid var(--gold-a25);
     border-radius: var(--radius);
     padding: 0.5rem;
     min-width: 160px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 24px var(--black-a30);
     gap: 0.15rem;
   }
 

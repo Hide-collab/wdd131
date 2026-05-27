@@ -1,4 +1,4 @@
-const temples = [
+ const temples = [
   {
     templeName: "Aba Nigeria",
     location: "Aba, Nigeria",
@@ -39,6 +39,7 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg",
   },
+
   {
     templeName: "Nairobi Kenya",
     location: "Nairobi, Kenya",
@@ -85,11 +86,11 @@ const temples = [
 function getDedicatedYear(dedicatedStr) {
   return parseInt(dedicatedStr.split(",")[0].trim(), 10);
 }
-
+ 
 function createTempleCard(temple) {
   const card = document.createElement("article");
   card.className = "temple-card";
-
+ 
   card.innerHTML = `
     <div class="card-image-wrap">
       <img
@@ -98,6 +99,7 @@ function createTempleCard(temple) {
         loading="lazy"
         width="400"
         height="250"
+        onerror="this.src='https://via.placeholder.com/400x250/3d3228/c9a84c?text=Image+Not+Found'; this.onerror=null;"
       />
     </div>
     <div class="card-body">
@@ -112,22 +114,22 @@ function createTempleCard(temple) {
       </dl>
     </div>
   `;
-
+ 
   return card;
 }
-
+ 
 function displayTemples(list) {
   const grid = document.getElementById("temple-grid");
   grid.innerHTML = "";
-
+ 
   if (list.length === 0) {
     grid.innerHTML = `<p class="no-results">No temples match this filter.</p>`;
     return;
   }
-
+ 
   list.forEach((t) => grid.appendChild(createTempleCard(t)));
 }
-
+ 
 const filters = {
   home: () => temples,
   old:  () => temples.filter((t) => getDedicatedYear(t.dedicated) < 1900),
@@ -135,14 +137,15 @@ const filters = {
   large: () => temples.filter((t) => t.area > 90000),
   small: () => temples.filter((t) => t.area < 10000),
 };
-
+ 
 function applyFilter(filterName) {
   const filtered = (filters[filterName] || filters.home)();
   displayTemples(filtered);
-
+ 
   document.querySelectorAll(".nav-link").forEach((link) => {
     link.classList.toggle("active", link.dataset.filter === filterName);
   });
+ 
 
   const labels = {
     home:  "All Temples",
@@ -154,16 +157,17 @@ function applyFilter(filterName) {
   document.getElementById("filter-heading").textContent =
     labels[filterName] || "All Temples";
 }
-
+ 
+ 
 document.addEventListener("DOMContentLoaded", () => {
-  
+  // Nav click handling
   document.querySelectorAll(".nav-link").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       applyFilter(link.dataset.filter);
     });
   });
-
+ 
   const hamburger = document.getElementById("hamburger");
   const navMenu = document.getElementById("nav-menu");
   hamburger.addEventListener("click", () => {
@@ -173,10 +177,10 @@ document.addEventListener("DOMContentLoaded", () => {
       navMenu.classList.contains("open")
     );
   });
-
+ 
   document.getElementById("copy-year").textContent = new Date().getFullYear();
   document.getElementById("last-modified").textContent =
     document.lastModified;
-
+ 
   applyFilter("home");
 });
