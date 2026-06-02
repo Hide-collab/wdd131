@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your product review has been submitted successfully." />
+  <title>Review Submitted | HomeEnergy Reviews</title>
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+
+  <!-- ── Site Header ── -->
+  <header class="site-header" role="banner">
+    <h1>HomeEnergy Reviews</h1>
+    <p>Share your experience &amp; help others choose wisely</p>
+  </header>
+
+  <!-- ── Main Content ── -->
+  <main id="main-content">
+    <div class="confirm-card" role="region" aria-label="Submission confirmation">
+
+      <div class="confirm-icon" aria-hidden="true">✅</div>
+      <h2>Thank You for Your Review!</h2>
+      <p>Your feedback helps homeowners make smarter energy decisions.</p>
+
+      <!-- Review Counter -->
+      <div aria-live="polite">
+        <p style="font-size:.8rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600;">
+          Total Reviews Submitted
+        </p>
+        <div class="counter-badge" id="review-count" aria-label="Review count">—</div>
+      </div>
+
+      <!-- Submission Summary -->
+      <table class="summary-table" aria-label="Your submission summary">
+        <tbody>
+          <tr>
+            <td>Product</td>
+            <td id="s-product">—</td>
+          </tr>
+          <tr>
+            <td>Rating</td>
+            <td id="s-rating">—</td>
+          </tr>
+          <tr>
+            <td>Installed</td>
+            <td id="s-date">—</td>
+          </tr>
+          <tr>
+            <td>Features</td>
+            <td id="s-features">—</td>
+          </tr>
+          <tr>
+            <td>Review</td>
+            <td id="s-review" style="font-style:italic;color:var(--muted);">—</td>
+          </tr>
+          <tr>
+            <td>Submitted by</td>
+            <td id="s-username">—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a href="form.html" class="btn-back">← Submit Another Review</a>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 HomeEnergy Reviews &nbsp;|&nbsp; <a href="form.html">Submit a Review</a></p>
+  </footer>
+
+  <script src="scripts/review.js"></script>
+</body>
+</html>

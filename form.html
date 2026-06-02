@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Submit a product review for recently installed home energy products." />
+  <title>Product Review | HomeEnergy Reviews</title>
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+
+  <!-- ── Site Header ── -->
+  <header class="site-header" role="banner">
+    <h1>HomeEnergy Reviews</h1>
+    <p>Share your experience &amp; help others choose wisely</p>
+  </header>
+
+  <!-- ── Main Content ── -->
+  <main id="main-content">
+    <div class="form-card" role="region" aria-label="Product review form">
+
+      <form method="get" action="review.html" novalidate>
+
+        <!-- ── 1. Product Name ── -->
+        <div class="form-section">
+          <label for="product-name">Product Name</label>
+          <select id="product-name" name="product-name" required aria-required="true">
+            <option value="" disabled selected>Select a Product …</option>
+            <!-- Options populated by form.js -->
+          </select>
+        </div>
+
+        <!-- ── 2. Overall Rating ── -->
+        <div class="form-section">
+          <fieldset style="border:none;padding:0;">
+            <legend class="field-label">Overall Rating</legend>
+            <div class="star-group" role="radiogroup" aria-label="Star rating 1 to 5">
+              <!-- Reversed order so CSS sibling trick works (5 = leftmost visually) -->
+              <input type="radio" id="star5" name="rating" value="5" required />
+              <label for="star5" aria-label="5 stars">&#9733;</label>
+
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4" aria-label="4 stars">&#9733;</label>
+
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3" aria-label="3 stars">&#9733;</label>
+
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2" aria-label="2 stars">&#9733;</label>
+
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1" aria-label="1 star">&#9733;</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- ── 3. Date of Installation ── -->
+        <div class="form-section">
+          <label for="install-date">Date of Installation</label>
+          <input
+            type="date"
+            id="install-date"
+            name="install-date"
+            required
+            aria-required="true"
+            max=""
+          />
+        </div>
+
+        <!-- ── 4. Useful Features ── -->
+        <div class="form-section">
+          <fieldset style="border:none;padding:0;">
+            <legend class="field-label">Useful Features <span class="optional-tag">(check all that apply)</span></legend>
+            <div class="checkbox-grid">
+
+              <label class="checkbox-item" for="feat-easy-install">
+                <input type="checkbox" id="feat-easy-install" name="features" value="easy-install" />
+                <span>Easy Installation</span>
+              </label>
+
+              <label class="checkbox-item" for="feat-energy-savings">
+                <input type="checkbox" id="feat-energy-savings" name="features" value="energy-savings" />
+                <span>Energy Savings</span>
+              </label>
+
+              <label class="checkbox-item" for="feat-smart-control">
+                <input type="checkbox" id="feat-smart-control" name="features" value="smart-control" />
+                <span>Smart Controls</span>
+              </label>
+
+              <label class="checkbox-item" for="feat-durability">
+                <input type="checkbox" id="feat-durability" name="features" value="durability" />
+                <span>Durability</span>
+              </label>
+
+              <label class="checkbox-item" for="feat-value">
+                <input type="checkbox" id="feat-value" name="features" value="value" />
+                <span>Good Value</span>
+              </label>
+
+              <label class="checkbox-item" for="feat-customer-support">
+                <input type="checkbox" id="feat-customer-support" name="features" value="customer-support" />
+                <span>Customer Support</span>
+              </label>
+
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- ── 5. Written Review ── -->
+        <div class="form-section">
+          <label for="review">
+            Written Review <span class="optional-tag">(optional)</span>
+          </label>
+          <textarea
+            id="review"
+            name="review"
+            placeholder="Tell us about your experience with this product…"
+            rows="5"
+          ></textarea>
+        </div>
+
+        <!-- ── 6. User Name ── -->
+        <div class="form-section">
+          <label for="username">
+            Your Name <span class="optional-tag">(optional)</span>
+          </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="e.g. Alex M."
+            autocomplete="name"
+          />
+        </div>
+
+        <!-- ── Submit ── -->
+        <input type="submit" class="btn-submit" value="Submit My Review →" />
+
+      </form>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 HomeEnergy Reviews &nbsp;|&nbsp; <a href="form.html">Submit a Review</a></p>
+  </footer>
+
+  <script src="scripts/form.js"></script>
+</body>
+</html>
