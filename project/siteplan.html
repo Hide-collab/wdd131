@@ -1,386 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site Plan – Zimbabwe Travel & Culture Guide</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    /* ── Design Tokens ─────────────────────────────────────── */
-    :root {
-      --clr-earth:    #8B4513;   /* warm saddle-brown  – headings, accents */
-      --clr-gold:     #C9922B;   /* savanna gold       – highlights, borders */
-      --clr-sage:     #4A6741;   /* baobab green       – nav, badges */
-      --clr-cream:    #FDF6EC;   /* paper cream        – page background */
-      --clr-dark:     #1C1209;   /* deep wood          – body text */
-      --clr-muted:    #7A6650;   /* dusty path         – captions, labels */
-      --clr-swatch1:  var(--clr-earth);
-      --clr-swatch2:  var(--clr-gold);
-      --clr-swatch3:  var(--clr-sage);
-      --clr-swatch4:  var(--clr-cream);
-
-      --ff-display: 'Cormorant Garamond', Georgia, serif;
-      --ff-body:    'DM Sans', sans-serif;
-
-      --radius: 4px;
-      --max-w:  860px;
-    }
-
-    /* ── Reset / Base ──────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: var(--ff-body);
-      background: var(--clr-cream);
-      color: var(--clr-dark);
-      line-height: 1.75;
-      font-size: 1rem;
-    }
-
-    img { display: block; max-width: 100%; }
-
-    a { color: var(--clr-earth); }
-
-    /* ── Page header ───────────────────────────────────────── */
-    .site-header {
-      background: var(--clr-dark);
-      color: var(--clr-cream);
-      padding: 2.5rem 1.5rem 2rem;
-      text-align: center;
-      border-bottom: 4px solid var(--clr-gold);
-    }
-
-    .logo-lockup {
-      display: inline-flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: .75rem;
-    }
-
-    .logo-icon {
-      width: 56px;
-      height: 56px;
-      flex-shrink: 0;
-    }
-
-    .site-header h1 {
-      font-family: var(--ff-display);
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 700;
-      color: var(--clr-gold);
-      line-height: 1.1;
-    }
-
-    .site-header .tagline {
-      font-size: .9rem;
-      color: var(--clr-muted);
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      margin-top: .35rem;
-    }
-
-    /* ── Navigation ────────────────────────────────────────── */
-    nav {
-      background: var(--clr-sage);
-      padding: .6rem 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: .35rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: .8rem;
-      font-weight: 500;
-      letter-spacing: .04em;
-      padding: .3rem .75rem;
-      border-radius: 2px;
-      transition: background .2s;
-    }
-
-    nav a:hover { background: rgba(255,255,255,.18); }
-
-    /* ── Main layout ───────────────────────────────────────── */
-    main {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 4rem;
-    }
-
-    /* ── Section card ──────────────────────────────────────── */
-    section {
-      margin-bottom: 3rem;
-      border-left: 4px solid var(--clr-gold);
-      padding-left: 1.5rem;
-    }
-
-    section h2 {
-      font-family: var(--ff-display);
-      font-size: clamp(1.4rem, 3.5vw, 2rem);
-      font-weight: 600;
-      color: var(--clr-earth);
-      margin-bottom: .6rem;
-      line-height: 1.2;
-    }
-
-    section h2 .section-num {
-      display: inline-block;
-      background: var(--clr-gold);
-      color: #fff;
-      font-family: var(--ff-body);
-      font-size: .7rem;
-      font-weight: 500;
-      letter-spacing: .05em;
-      padding: .15rem .5rem;
-      border-radius: 2px;
-      margin-right: .5rem;
-      vertical-align: middle;
-      position: relative;
-      top: -2px;
-    }
-
-    section p { margin-bottom: .75rem; color: var(--clr-dark); }
-    section p:last-child { margin-bottom: 0; }
-
-    .label {
-      font-size: .75rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--clr-muted);
-      margin-bottom: .25rem;
-    }
-
-    /* ── Site Name block ───────────────────────────────────── */
-    .name-block {
-      display: inline-flex;
-      align-items: center;
-      gap: .75rem;
-      background: #fff;
-      border: 1px solid #e8dfd0;
-      border-radius: var(--radius);
-      padding: .75rem 1.2rem;
-      margin-bottom: .85rem;
-    }
-
-    .name-block .big-name {
-      font-family: var(--ff-display);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--clr-earth);
-    }
-
-    .domain-pill {
-      display: inline-block;
-      background: var(--clr-sage);
-      color: #fff;
-      font-size: .78rem;
-      padding: .2rem .7rem;
-      border-radius: 20px;
-      margin-top: .4rem;
-    }
-
-    /* ── Scenarios ─────────────────────────────────────────── */
-    .scenarios-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: .65rem;
-      margin-top: .5rem;
-    }
-
-    .scenarios-list li {
-      background: #fff;
-      border: 1px solid #e8dfd0;
-      border-radius: var(--radius);
-      padding: .75rem 1rem;
-      display: flex;
-      gap: .75rem;
-      align-items: flex-start;
-    }
-
-    .scenarios-list li::before {
-      content: "?";
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--clr-gold);
-      color: #fff;
-      font-weight: 700;
-      font-size: .85rem;
-      display: grid;
-      place-items: center;
-      margin-top: 1px;
-    }
-
-    /* ── Color Schema ──────────────────────────────────────── */
-    .color-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-      gap: 1rem;
-      margin-top: .75rem;
-    }
-
-    .color-card {
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid #e0d6c8;
-      background: #fff;
-    }
-
-    .color-swatch {
-      height: 72px;
-    }
-
-    .color-info {
-      padding: .65rem .85rem;
-    }
-
-    .color-info strong {
-      display: block;
-      font-size: .9rem;
-      color: var(--clr-dark);
-      font-weight: 500;
-    }
-
-    .color-info span {
-      font-size: .78rem;
-      color: var(--clr-muted);
-    }
-
-    .color-info .hex {
-      font-family: monospace;
-      font-size: .8rem;
-      color: var(--clr-earth);
-    }
-
-    /* ── Typography ────────────────────────────────────────── */
-    .type-sample {
-      background: #fff;
-      border: 1px solid #e8dfd0;
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .type-sample .font-label {
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: var(--clr-muted);
-      margin-bottom: .4rem;
-    }
-
-    .type-sample .display-demo {
-      font-family: var(--ff-display);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--clr-earth);
-      line-height: 1.15;
-    }
-
-    .type-sample .body-demo {
-      font-family: var(--ff-body);
-      font-size: 1rem;
-      color: var(--clr-dark);
-      line-height: 1.75;
-    }
-
-    .type-uses {
-      font-size: .8rem;
-      color: var(--clr-muted);
-      margin-top: .4rem;
-      font-style: italic;
-    }
-
-    /* ── Wireframes ────────────────────────────────────────── */
-    .wireframe-wrap {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 1.5rem;
-      margin-top: .75rem;
-    }
-
-    @media (max-width: 600px) {
-      .wireframe-wrap { grid-template-columns: 1fr; }
-    }
-
-    .wireframe-fig {
-      background: #fff;
-      border: 1px solid #e0d6c8;
-      border-radius: var(--radius);
-      padding: 1rem;
-    }
-
-    .wireframe-fig figcaption {
-      text-align: center;
-      font-size: .8rem;
-      color: var(--clr-muted);
-      margin-top: .6rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-    }
-
-    /* SVG wireframe helpers */
-    .wf { width: 100%; height: auto; }
-    .wf-bg   { fill: #f5f0e8; }
-    .wf-bar  { fill: #4A6741; }
-    .wf-hero { fill: #C9922B; opacity: .35; }
-    .wf-card { fill: #e0d5c4; }
-    .wf-txt  { fill: #b0a090; }
-    .wf-line { stroke: #c9b89a; stroke-width: 1; }
-    .wf-label{ font-family: sans-serif; font-size: 9px; fill: #7A6650; text-anchor: middle; }
-
-    /* ── Footer ────────────────────────────────────────────── */
-    footer {
-      background: var(--clr-dark);
-      color: var(--clr-muted);
-      text-align: center;
-      padding: 1.25rem 1rem;
-      font-size: .82rem;
-      border-top: 3px solid var(--clr-gold);
-    }
-
-    footer strong { color: var(--clr-gold); }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="W05 site plan for the Zimbabwe Travel and Culture Guide — a website covering attractions, food, culture, and travel tips across Zimbabwe.">
+  <meta name="author" content="Hide Vhunzawabya">
+  <title>Site Plan - Zimbabwe Travel &amp; Culture Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="siteplan.css">
 </head>
 <body>
 
- 
+  <!-- ── Page Header ───────────────────────────────────────── -->
   <header class="site-header">
     <div class="logo-lockup">
-      <!-- Inline SVG logo: stylised baobab tree -->
+      <!-- Inline SVG baobab tree logo (presentational only) -->
       <svg class="logo-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="28" cy="28" r="28" fill="#C9922B" opacity=".15"/>
-        <!-- trunk -->
-        <rect x="24" y="28" width="8" height="16" rx="2" fill="#C9922B"/>
-        <!-- roots -->
-        <line x1="24" y1="42" x2="16" y2="48" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="32" y1="42" x2="40" y2="48" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="28" y1="44" x2="28" y2="50" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"/>
-        <!-- canopy -->
-        <ellipse cx="28" cy="20" rx="16" ry="12" fill="#4A6741"/>
-        <ellipse cx="18" cy="24" rx="8" ry="6" fill="#4A6741"/>
-        <ellipse cx="38" cy="24" rx="8" ry="6" fill="#4A6741"/>
-        <ellipse cx="28" cy="14" rx="10" ry="8" fill="#5a7d50"/>
+        <circle cx="28" cy="28" r="28" fill="#C9922B" opacity=".15"></circle>
+        <rect x="24" y="28" width="8" height="16" rx="2" fill="#C9922B"></rect>
+        <line x1="24" y1="42" x2="16" y2="48" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+        <line x1="32" y1="42" x2="40" y2="48" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+        <line x1="28" y1="44" x2="28" y2="50" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+        <ellipse cx="28" cy="20" rx="16" ry="12" fill="#4A6741"></ellipse>
+        <ellipse cx="18" cy="24" rx="8" ry="6" fill="#4A6741"></ellipse>
+        <ellipse cx="38" cy="24" rx="8" ry="6" fill="#4A6741"></ellipse>
+        <ellipse cx="28" cy="14" rx="10" ry="8" fill="#5a7d50"></ellipse>
       </svg>
       <div>
         <h1>Zimbabwe Travel &amp; Culture Guide</h1>
-        <p class="tagline">W05 Website Planning Document &nbsp;·&nbsp; WDD 131</p>
+        <p class="tagline">W05 Website Planning Document &nbsp;&middot;&nbsp;</p>
       </div>
     </div>
   </header>
 
-  <!-- ── Sticky Nav ─────────────────────────────────────────── -->
+
   <nav aria-label="Section navigation">
     <a href="#site-name">Site Name</a>
     <a href="#purpose">Purpose</a>
@@ -398,12 +53,11 @@
       <h2><span class="section-num">01</span> Site Name</h2>
 
       <div class="name-block">
-        <!-- small inline logo repeat -->
         <svg width="32" height="32" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="24" y="28" width="8" height="16" rx="2" fill="#C9922B"/>
-          <ellipse cx="28" cy="20" rx="16" ry="12" fill="#4A6741"/>
-          <ellipse cx="18" cy="24" rx="8" ry="6" fill="#4A6741"/>
-          <ellipse cx="38" cy="24" rx="8" ry="6" fill="#4A6741"/>
+          <rect x="24" y="28" width="8" height="16" rx="2" fill="#C9922B"></rect>
+          <ellipse cx="28" cy="20" rx="16" ry="12" fill="#4A6741"></ellipse>
+          <ellipse cx="18" cy="24" rx="8" ry="6" fill="#4A6741"></ellipse>
+          <ellipse cx="38" cy="24" rx="8" ry="6" fill="#4A6741"></ellipse>
         </svg>
         <span class="big-name">Zimbabwe Travel &amp; Culture Guide</span>
       </div>
@@ -417,11 +71,6 @@
         The word <em>Zimbabwe</em> anchors the brand geographically, while <em>Guide</em>
         positions the site as a helpful, informative resource rather than just a tourism advertisement.
       </p>
-
-      <div>
-        <p class="label">Optional domain suggestion</p>
-        <span class="domain-pill">zim-travel-guide.com</span>
-      </div>
     </section>
 
     <!-- 2. Site Purpose -->
@@ -471,7 +120,7 @@
       <div class="color-grid">
 
         <div class="color-card">
-          <div class="color-swatch" style="background:#8B4513;"></div>
+          <div class="color-swatch swatch-earth"></div>
           <div class="color-info">
             <strong>Earth Brown</strong>
             <span class="hex">#8B4513</span>
@@ -480,7 +129,7 @@
         </div>
 
         <div class="color-card">
-          <div class="color-swatch" style="background:#C9922B;"></div>
+          <div class="color-swatch swatch-gold"></div>
           <div class="color-info">
             <strong>Savanna Gold</strong>
             <span class="hex">#C9922B</span>
@@ -489,7 +138,7 @@
         </div>
 
         <div class="color-card">
-          <div class="color-swatch" style="background:#4A6741;"></div>
+          <div class="color-swatch swatch-sage"></div>
           <div class="color-info">
             <strong>Baobab Green</strong>
             <span class="hex">#4A6741</span>
@@ -498,7 +147,7 @@
         </div>
 
         <div class="color-card">
-          <div class="color-swatch" style="background:#FDF6EC; border:1px solid #e0d6c8;"></div>
+          <div class="color-swatch swatch-cream"></div>
           <div class="color-info">
             <strong>Paper Cream</strong>
             <span class="hex">#FDF6EC</span>
@@ -507,7 +156,7 @@
         </div>
 
         <div class="color-card">
-          <div class="color-swatch" style="background:#1C1209;"></div>
+          <div class="color-swatch swatch-dark"></div>
           <div class="color-info">
             <strong>Deep Wood</strong>
             <span class="hex">#1C1209</span>
@@ -516,7 +165,7 @@
         </div>
 
         <div class="color-card">
-          <div class="color-swatch" style="background:#7A6650;"></div>
+          <div class="color-swatch swatch-muted"></div>
           <div class="color-info">
             <strong>Dusty Path</strong>
             <span class="hex">#7A6650</span>
@@ -532,10 +181,9 @@
       <h2><span class="section-num">05</span> Typography</h2>
       <p>Two complementary Google Fonts are selected to balance elegance with readability:</p>
 
-      <!-- Font 1 -->
       <div class="type-sample">
-        <p class="font-label">Font 1 — Cormorant Garamond (Display / Serif)</p>
-        <p class="display-demo">Victoria Falls — Wonder of the World</p>
+        <p class="font-label">Font 1 &mdash; Cormorant Garamond (Display / Serif)</p>
+        <p class="display-demo">Victoria Falls &mdash; Wonder of the World</p>
         <p class="type-uses">
           Used for: page titles (h1), section headings (h2, h3), pull quotes,
           hero text, and the site logo wordmark.
@@ -543,9 +191,8 @@
         </p>
       </div>
 
-      <!-- Font 2 -->
       <div class="type-sample">
-        <p class="font-label">Font 2 — DM Sans (Body / Sans-serif)</p>
+        <p class="font-label">Font 2 &mdash; DM Sans (Body / Sans-serif)</p>
         <p class="body-demo">
           Zimbabwe is home to some of Africa's most spectacular landscapes, from the thundering
           waters of Victoria Falls to the ancient stone walls of Great Zimbabwe. Whether you are
@@ -560,6 +207,7 @@
       </div>
     </section>
 
+    <!-- 6. Wireframes -->
     <section id="wireframes">
       <h2><span class="section-num">06</span> Wireframes</h2>
       <p>
@@ -573,30 +221,23 @@
         <!-- Mobile wireframe -->
         <figure class="wireframe-fig">
           <svg class="wf" viewBox="0 0 160 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mobile wireframe layout">
-            <!-- bg -->
-            <rect width="160" height="320" class="wf-bg"/>
-            <!-- nav bar -->
-            <rect x="0" y="0" width="160" height="22" class="wf-bar"/>
+            <rect width="160" height="320" class="wf-bg"></rect>
+            <rect x="0" y="0" width="160" height="22" class="wf-bar"></rect>
             <text x="80" y="14" class="wf-label" fill="#fff">NAV / LOGO</text>
-            <!-- hero -->
-            <rect x="6" y="28" width="148" height="60" class="wf-hero" rx="2"/>
+            <rect x="6" y="28" width="148" height="60" class="wf-hero" rx="2"></rect>
             <text x="80" y="62" class="wf-label">HERO IMAGE + TITLE</text>
-            <!-- intro text -->
-            <rect x="6" y="96" width="148" height="8" class="wf-txt" rx="1"/>
-            <rect x="6" y="108" width="120" height="8" class="wf-txt" rx="1"/>
+            <rect x="6" y="96" width="148" height="8" class="wf-txt" rx="1"></rect>
+            <rect x="6" y="108" width="120" height="8" class="wf-txt" rx="1"></rect>
             <text x="80" y="124" class="wf-label">INTRO PARAGRAPH</text>
-            <!-- cards stacked -->
-            <rect x="6" y="130" width="148" height="40" class="wf-card" rx="2"/>
+            <rect x="6" y="130" width="148" height="40" class="wf-card" rx="2"></rect>
             <text x="80" y="154" class="wf-label">ATTRACTION CARD 1</text>
-            <rect x="6" y="176" width="148" height="40" class="wf-card" rx="2"/>
+            <rect x="6" y="176" width="148" height="40" class="wf-card" rx="2"></rect>
             <text x="80" y="200" class="wf-label">ATTRACTION CARD 2</text>
-            <rect x="6" y="222" width="148" height="40" class="wf-card" rx="2"/>
+            <rect x="6" y="222" width="148" height="40" class="wf-card" rx="2"></rect>
             <text x="80" y="246" class="wf-label">ATTRACTION CARD 3</text>
-            <!-- cta button -->
-            <rect x="40" y="270" width="80" height="18" fill="#C9922B" rx="9"/>
+            <rect x="40" y="270" width="80" height="18" fill="#C9922B" rx="9"></rect>
             <text x="80" y="282" class="wf-label" fill="#fff">EXPLORE MORE</text>
-            <!-- footer -->
-            <rect x="0" y="298" width="160" height="22" fill="#1C1209"/>
+            <rect x="0" y="298" width="160" height="22" fill="#1C1209"></rect>
             <text x="80" y="312" class="wf-label" fill="#7A6650">FOOTER</text>
           </svg>
           <figcaption>Mobile View (~375px)</figcaption>
@@ -605,32 +246,26 @@
         <!-- Desktop wireframe -->
         <figure class="wireframe-fig">
           <svg class="wf" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Desktop wireframe layout">
-            <!-- bg -->
-            <rect width="320" height="240" class="wf-bg"/>
-            <!-- nav bar -->
-            <rect x="0" y="0" width="320" height="22" class="wf-bar"/>
+            <rect width="320" height="240" class="wf-bg"></rect>
+            <rect x="0" y="0" width="320" height="22" class="wf-bar"></rect>
             <text x="50" y="14" class="wf-label" fill="#fff">LOGO</text>
-            <text x="200" y="14" class="wf-label" fill="#fff">HOME · ATTRACTIONS · CULTURE · FOOD · TIPS</text>
-            <!-- hero full width -->
-            <rect x="0" y="22" width="320" height="70" class="wf-hero"/>
-            <text x="160" y="52" class="wf-label" style="font-size:11px;">FULL-WIDTH HERO IMAGE</text>
+            <text x="200" y="14" class="wf-label" fill="#fff">HOME &middot; ATTRACTIONS &middot; CULTURE &middot; FOOD &middot; TIPS</text>
+            <rect x="0" y="22" width="320" height="70" class="wf-hero"></rect>
+            <text x="160" y="52" class="wf-label">FULL-WIDTH HERO IMAGE</text>
             <text x="160" y="65" class="wf-label">H1 TITLE + TAGLINE + CTA BUTTON</text>
-            <!-- intro row -->
-            <rect x="10" y="100" width="140" height="8" class="wf-txt" rx="1"/>
-            <rect x="10" y="112" width="100" height="8" class="wf-txt" rx="1"/>
+            <rect x="10" y="100" width="140" height="8" class="wf-txt" rx="1"></rect>
+            <rect x="10" y="112" width="100" height="8" class="wf-txt" rx="1"></rect>
             <text x="80" y="128" class="wf-label">INTRO TEXT</text>
-            <rect x="170" y="96" width="140" height="36" class="wf-card" rx="2"/>
+            <rect x="170" y="96" width="140" height="36" class="wf-card" rx="2"></rect>
             <text x="240" y="118" class="wf-label">FEATURED IMAGE</text>
-            <!-- 3-col cards -->
-            <rect x="10" y="140" width="90" height="50" class="wf-card" rx="2"/>
+            <rect x="10" y="140" width="90" height="50" class="wf-card" rx="2"></rect>
             <text x="55" y="168" class="wf-label">CARD 1</text>
-            <rect x="115" y="140" width="90" height="50" class="wf-card" rx="2"/>
+            <rect x="115" y="140" width="90" height="50" class="wf-card" rx="2"></rect>
             <text x="160" y="168" class="wf-label">CARD 2</text>
-            <rect x="220" y="140" width="90" height="50" class="wf-card" rx="2"/>
+            <rect x="220" y="140" width="90" height="50" class="wf-card" rx="2"></rect>
             <text x="265" y="168" class="wf-label">CARD 3</text>
-            <!-- footer -->
-            <rect x="0" y="218" width="320" height="22" fill="#1C1209"/>
-            <text x="160" y="232" class="wf-label" fill="#7A6650">FOOTER — LINKS · COPYRIGHT · SOCIAL</text>
+            <rect x="0" y="218" width="320" height="22" fill="#1C1209"></rect>
+            <text x="160" y="232" class="wf-label" fill="#7A6650">FOOTER &mdash; LINKS &middot; COPYRIGHT &middot; SOCIAL</text>
           </svg>
           <figcaption>Desktop View (~1024px+)</figcaption>
         </figure>
@@ -643,15 +278,13 @@
   <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer>
     <p>
-      <strong>Zimbabwe Travel &amp; Culture Guide</strong> &nbsp;·&nbsp;
-      WDD 131  W05 Site Plan &nbsp;·&nbsp;
+      <strong>Zimbabwe Travel &amp; Culture Guide</strong> &nbsp;&middot;&nbsp;
+      Hide VHunzawabaya &ndash; W05 Site Plan &nbsp;&middot;&nbsp;
       &copy; <span id="yr"></span>
     </p>
   </footer>
 
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
+  <script src="siteplan.js"></script>
 
 </body>
 </html>
