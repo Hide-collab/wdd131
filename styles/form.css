@@ -1,26 +1,33 @@
-/* ── Typography ── */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
 
-/* ── Design Tokens ── */
 :root {
-  --cream:      #f5f0e8;
-  --cream-dark: #ede6d6;
-  --navy:       #1a2340;
-  --navy-mid:   #2e3d5f;
-  --terra:      #c0563a;
-  --terra-light:#e8775e;
-  --gold:       #d4a853;
-  --muted:      #6b7590;
-  --border:     #c8c0b0;
-  --white:      #ffffff;
-  --radius:     6px;
-  --shadow:     0 2px 16px rgba(26,35,64,.10);
-  --font-head:  'DM Serif Display', Georgia, serif;
-  --font-body:  'DM Sans', sans-serif;
+--cream:      #f5f0e8;
+--cream-dark: #ede6d6;
+--navy:       #1a2340;
+--navy-mid:   #2e3d5f;
+--terra:      #c0563a;
+--terra-light:#e8775e;
+--gold:       #d4a853;
+--muted:      #6b7590;
+--border:     #c8c0b0;
+--white:      #ffffff;
+--radius:     6px;
+--shadow:     0 2px 16px rgba(26,35,64,.10);
+--font-head:  'DM Serif Display', Georgia, serif;
+--font-body:  'DM Sans', sans-serif;
+}
+
+.plain-fieldset {
+border: none;
+padding: 0;
 }
 
 /* ── Reset ── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
 
 html { scroll-behavior: smooth; }
 
