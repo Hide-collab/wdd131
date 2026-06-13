@@ -1,0 +1,271 @@
+/* culture.css — Culture & Food page styles */
+
+/* ── Food Grid ───────────────────────────────────────────────── */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.food-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 3px solid var(--gold);
+  transition: box-shadow var(--transition), transform var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.food-icon-wrap {
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  padding: 1.75rem 0;
+}
+
+.food-body {
+  padding: 1.2rem 1.4rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-body h3 {
+  font-family: var(--ff-display);
+  font-size: var(--size-xl);
+  font-weight: 700;
+  color: var(--earth);
+  margin-bottom: 0.4rem;
+}
+
+.food-body p {
+  font-size: var(--size-sm);
+  color: var(--muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.food-tag {
+  display: inline-block;
+  background: var(--light);
+  border-radius: 20px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--earth);
+  margin-top: 0.85rem;
+  align-self: flex-start;
+}
+
+/* ── Music Grid ──────────────────────────────────────────────── */
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.music-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--sage);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.music-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.music-icon {
+  font-size: 2rem;
+  margin-bottom: 0.65rem;
+  line-height: 1;
+}
+
+.music-card h3 {
+  font-family: var(--ff-display);
+  font-size: var(--size-xl);
+  font-weight: 700;
+  color: var(--earth);
+  margin-bottom: 0.4rem;
+}
+
+.music-card p {
+  font-size: var(--size-sm);
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.music-origin {
+  font-size: var(--size-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-top: 0.6rem;
+}
+
+/* ── Art Cards ───────────────────────────────────────────────── */
+/* Uses shared .card-grid and .card from styles.css */
+
+/* ── Festival List ───────────────────────────────────────────── */
+.festival-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.festival-item {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.festival-item:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.festival-month {
+  text-align: center;
+  background: var(--earth);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.5rem;
+}
+
+.festival-month .month-name {
+  display: block;
+  font-size: var(--size-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.festival-month .month-icon {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
+}
+
+.festival-info h3 {
+  font-family: var(--ff-display);
+  font-size: var(--size-xl);
+  font-weight: 700;
+  color: var(--earth);
+  margin-bottom: 0.2rem;
+}
+
+.festival-info p {
+  font-size: var(--size-sm);
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.festival-location {
+  font-size: var(--size-xs);
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  margin-top: 0.35rem;
+}
+
+/* ── Did You Know Ticker ─────────────────────────────────────── */
+.did-you-know-wrap {
+  text-align: center;
+}
+
+.fact-ticker {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  margin: 1rem auto 1.5rem;
+  max-width: 640px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticker-text {
+  font-family: var(--ff-display);
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.ticker-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.btn-outline-ticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius);
+  font-family: var(--ff-body);
+  font-size: var(--size-sm);
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: var(--light);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.btn-outline-ticker:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.ticker-index {
+  font-size: var(--size-xs);
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .festival-item {
+    grid-template-columns: 60px 1fr;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+  }
+
+  .food-grid,
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+}

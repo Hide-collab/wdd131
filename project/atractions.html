@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Zimbabwe's top tourist attractions — Victoria Falls, Great Zimbabwe ruins, Hwange National Park, the Eastern Highlands, and more.">
+  <meta name="author" content="Hide Vhunzawbaya">
+  <title>Attractions – Zimbabwe Travel &amp; Culture Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/atractions.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Zimbabwe Travel Guide home">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="24" y="28" width="8" height="16" rx="2" fill="#C9922B"></rect>
+          <line x1="24" y1="42" x2="16" y2="48" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+          <line x1="32" y1="42" x2="40" y2="48" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+          <line x1="28" y1="44" x2="28" y2="50" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+          <ellipse cx="28" cy="20" rx="16" ry="12" fill="#4A6741"></ellipse>
+          <ellipse cx="18" cy="24" rx="8" ry="6" fill="#4A6741"></ellipse>
+          <ellipse cx="38" cy="24" rx="8" ry="6" fill="#4A6741"></ellipse>
+          <ellipse cx="28" cy="14" rx="10" ry="8" fill="#5a7d50"></ellipse>
+        </svg>
+        <div class="nav-logo-text">
+          Zimbabwe
+          <span>Travel &amp; Culture Guide</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="culture.html">Culture &amp; Food</a></li>
+        <li><a href="contact.html">Plan Your Trip</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Page Hero ──────────────────────────────────────────── -->
+  <header class="page-hero" role="banner">
+    <p class="page-hero-eyebrow">Explore Zimbabwe</p>
+    <h1>Attractions &amp; Destinations</h1>
+    <p>From UNESCO World Heritage sites to untamed wilderness — discover the places that make Zimbabwe extraordinary.</p>
+  </header>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- Filter Bar -->
+    <section class="filter-bar-section" aria-label="Filter attractions">
+      <div class="container">
+        <div class="filter-bar">
+          <p class="filter-label">Filter by category:</p>
+          <div class="filter-buttons" role="group" aria-label="Attraction categories" id="filter-buttons">
+            <!-- Injected by attractions.js -->
+          </div>
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Attractions Grid -->
+    <section class="section" aria-labelledby="attractions-heading">
+      <div class="container">
+        <h2 class="sr-only" id="attractions-heading">All Attractions</h2>
+        <div class="card-grid" id="attractions-grid">
+          <!-- Injected by attractions.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Map / Region Section -->
+    <section class="section section-alt" aria-labelledby="regions-heading">
+      <div class="container">
+        <p class="eyebrow">Plan Your Route</p>
+        <h2 class="section-title" id="regions-heading">Zimbabwe by Region</h2>
+        <hr class="divider">
+        <p class="section-subtitle">Zimbabwe's attractions are spread across distinct regions, each with its own character.</p>
+        <div class="regions-grid" id="regions-grid">
+          <!-- Injected by attractions.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-brand-name">Zimbabwe Guide</p>
+          <p class="footer-brand-desc">A student project celebrating the beauty, culture, and heritage of Zimbabwe. Built for WDD 131 at BYU–Idaho.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="culture.html">Culture &amp; Food</a></li>
+            <li><a href="contact.html">Plan Your Trip</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> Zimbabwe Travel &amp; Culture Guide &mdash; WDD 131 Project</p>
+        <a href="references.html">References &amp; Image Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/home.js"></script>
+  <script src="scripts/attractions.js"></script>
+</body>
+</html>

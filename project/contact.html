@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan your Zimbabwe trip — fill in your travel preferences and get a personalised itinerary checklist. Includes essential travel tips, best time to visit, and packing advice.">
+  <meta name="author" content="Hide Vhunzawabaya">
+  <title>Plan Your Trip – Zimbabwe Travel &amp; Culture Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Zimbabwe Travel Guide home">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="24" y="28" width="8" height="16" rx="2" fill="#C9922B"></rect>
+          <line x1="24" y1="42" x2="16" y2="48" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+          <line x1="32" y1="42" x2="40" y2="48" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+          <line x1="28" y1="44" x2="28" y2="50" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+          <ellipse cx="28" cy="20" rx="16" ry="12" fill="#4A6741"></ellipse>
+          <ellipse cx="18" cy="24" rx="8" ry="6" fill="#4A6741"></ellipse>
+          <ellipse cx="38" cy="24" rx="8" ry="6" fill="#4A6741"></ellipse>
+          <ellipse cx="28" cy="14" rx="10" ry="8" fill="#5a7d50"></ellipse>
+        </svg>
+        <div class="nav-logo-text">
+          Zimbabwe
+          <span>Travel &amp; Culture Guide</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="culture.html">Culture &amp; Food</a></li>
+        <li><a href="contact.html">Plan Your Trip</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Page Hero ──────────────────────────────────────────── -->
+  <header class="page-hero" role="banner">
+    <p class="page-hero-eyebrow">Your Zimbabwe Journey</p>
+    <h1>Plan Your Trip</h1>
+    <p>Tell us about your travel style and we will build a personalised destination checklist for your Zimbabwe adventure.</p>
+  </header>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- Trip Planner Form -->
+    <section class="section" aria-labelledby="planner-heading">
+      <div class="container form-layout">
+
+        <!-- Form Column -->
+        <div class="form-col">
+          <p class="eyebrow">Build Your Itinerary</p>
+          <h2 class="section-title" id="planner-heading">Trip Planner</h2>
+          <hr class="divider">
+          <p class="form-intro">Fill in the form and click <strong>Generate My Itinerary</strong> to get a customised list of recommended destinations and activities.</p>
+
+          <form id="trip-form" novalidate aria-label="Trip planner form">
+
+            <div class="form-group">
+              <label for="traveller-name" class="form-label">Your Name <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="traveller-name"
+                name="traveller-name"
+                class="form-input"
+                placeholder="e.g. Tendai Moyo"
+                autocomplete="given-name"
+                required
+              >
+              <span class="field-error" id="name-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="traveller-email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="traveller-email"
+                name="traveller-email"
+                class="form-input"
+                placeholder="e.g. tendai@example.com"
+                autocomplete="email"
+                required
+              >
+              <span class="field-error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="trip-duration" class="form-label">Trip Duration <span class="required" aria-hidden="true">*</span></label>
+              <select id="trip-duration" name="trip-duration" class="form-select" required>
+                <option value="">-- Select duration --</option>
+                <option value="weekend">Weekend (2–3 days)</option>
+                <option value="week">One Week (5–7 days)</option>
+                <option value="twoweeks">Two Weeks (10–14 days)</option>
+                <option value="extended">Extended (15+ days)</option>
+              </select>
+              <span class="field-error" id="duration-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="travel-season" class="form-label">When Are You Travelling?</label>
+              <select id="travel-season" name="travel-season" class="form-select">
+                <option value="">-- Select season --</option>
+                <option value="dry">Dry Season (May – October)</option>
+                <option value="wet">Wet Season (November – April)</option>
+                <option value="unsure">Not Sure Yet</option>
+              </select>
+            </div>
+
+            <fieldset class="form-group form-fieldset">
+              <legend class="form-label">Travel Interests <span class="required" aria-hidden="true">*</span> <span class="hint">(select at least one)</span></legend>
+              <div class="checkbox-grid">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="wildlife"> Wildlife &amp; Safaris
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="history"> History &amp; Heritage
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="nature"> Nature &amp; Scenery
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="culture"> Culture &amp; Food
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="adventure"> Adventure Sports
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="interests" value="city"> City &amp; Markets
+                </label>
+              </div>
+              <span class="field-error" id="interests-error" role="alert"></span>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="budget" class="form-label">Budget Range</label>
+              <select id="budget" name="budget" class="form-select">
+                <option value="">-- Select budget --</option>
+                <option value="budget">Budget (under $50/day)</option>
+                <option value="mid">Mid-range ($50–$150/day)</option>
+                <option value="luxury">Luxury ($150+/day)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="notes" class="form-label">Additional Notes</label>
+              <textarea
+                id="notes"
+                name="notes"
+                class="form-textarea"
+                rows="3"
+                placeholder="Any special requirements, accessibility needs, or questions?"
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
+                Generate My Itinerary
+              </button>
+              <button type="button" class="btn btn-outline" id="reset-btn">
+                Clear Form
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Results Column -->
+        <div class="results-col" id="results-col" aria-live="polite">
+          <div class="results-placeholder" id="results-placeholder">
+            <div class="placeholder-icon" aria-hidden="true">🗺️</div>
+            <h3>Your Itinerary</h3>
+            <p>Fill in the form and click <strong>Generate My Itinerary</strong> to see your personalised destination checklist here.</p>
+          </div>
+          <div class="itinerary-output" id="itinerary-output" hidden>
+            <!-- Injected by contact.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Saved Itineraries -->
+    <section class="section section-alt" aria-labelledby="saved-heading">
+      <div class="container">
+        <p class="eyebrow">Your History</p>
+        <h2 class="section-title" id="saved-heading">Saved Itineraries</h2>
+        <hr class="divider">
+        <p class="section-subtitle">Itineraries you have generated are saved here so you can review them anytime.</p>
+        <div id="saved-list" aria-live="polite">
+          <!-- Injected by contact.js -->
+        </div>
+        <button class="btn btn-outline" id="clear-saved-btn" hidden>
+          Clear All Saved Itineraries
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-brand-name">Zimbabwe Guide</p>
+          <p class="footer-brand-desc">A student project celebrating the beauty, culture, and heritage of Zimbabwe. Built for WDD 131 at BYU–Idaho.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="culture.html">Culture &amp; Food</a></li>
+            <li><a href="contact.html">Plan Your Trip</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> Zimbabwe Travel &amp; Culture Guide &mdash; WDD 131 Project</p>
+        <a href="references.html">References &amp; Image Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/home.js"></script>
+  <script src="scripts/contact.js"></script>
+</body>
+</html>

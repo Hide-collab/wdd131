@@ -1,0 +1,307 @@
+/* home.css — Home page specific styles */
+
+/* ── Hero ────────────────────────────────────────────────────── */
+.home-hero {
+  background: var(--dark);
+  background-image: linear-gradient(
+    135deg,
+    rgba(139, 69, 19, 0.55) 0%,
+    rgba(26, 17, 8, 0.85) 55%,
+    rgba(61, 92, 53, 0.45) 100%
+  );
+  padding: 5rem 1.5rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(ellipse at 70% 50%, rgba(201, 146, 43, 0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-eyebrow {
+  font-size: var(--size-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(2.4rem, 6.5vw, 5rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.06;
+  margin-bottom: 1.25rem;
+  max-width: 680px;
+}
+
+.hero-lead {
+  font-size: var(--size-lg);
+  color: #c8bfb2;
+  max-width: 520px;
+  margin-bottom: 2rem;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius);
+  font-family: var(--ff-body);
+  font-size: var(--size-sm);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  color: var(--white);
+  background: transparent;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: var(--white);
+}
+
+.hero-stats {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  position: relative;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: var(--size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a09080;
+  margin-top: 0.2rem;
+}
+
+/* ── Highlights Section ─────────────────────────────────────── */
+.highlights-grid {
+  margin-top: 0.5rem;
+}
+
+/* ── Why Zimbabwe ───────────────────────────────────────────── */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.why-text p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.why-text p:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.why-facts {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.75rem 1.5rem;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--gold);
+}
+
+.why-facts-title {
+  font-family: var(--ff-display);
+  font-size: var(--size-xl);
+  font-weight: 700;
+  color: var(--earth);
+  margin-bottom: 1.25rem;
+}
+
+.facts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--light);
+  padding-bottom: 0.75rem;
+}
+
+.fact-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fact-term {
+  font-size: var(--size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+
+.fact-value {
+  font-size: var(--size-sm);
+  color: var(--dark);
+}
+
+/* ── Culture Teaser ─────────────────────────────────────────── */
+.culture-teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.culture-tile {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 3px solid transparent;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.culture-tile:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.culture-tile-icon {
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.culture-tile h3 {
+  font-family: var(--ff-display);
+  font-size: var(--size-xl);
+  font-weight: 700;
+  color: var(--earth);
+}
+
+.culture-tile p {
+  font-size: var(--size-sm);
+  color: var(--muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.culture-tile .btn {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* ── Tips Section ───────────────────────────────────────────── */
+.tips-section {
+  padding: 4rem 0;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.tip-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.25rem 1.1rem;
+  transition: background var(--transition);
+}
+
+.tip-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tip-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+
+.tip-card h3 {
+  font-size: var(--size-sm);
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.03em;
+}
+
+.tip-card p {
+  font-size: var(--size-xs);
+  color: #a09080;
+  line-height: 1.6;
+}
+
+.tips-cta {
+  text-align: center;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .culture-teaser-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .culture-teaser-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
+  }
+}

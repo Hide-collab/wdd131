@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Zimbabwe's vibrant culture — traditional food like sadza and nyama, mbira music, Shona stone sculpture, annual festivals, and rich living traditions.">
+  <meta name="author" content="Hide Vhunzawabaya">
+  <title>Culture &amp; Food – Zimbabwe Travel &amp; Culture Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/culture.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Zimbabwe Travel Guide home">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="24" y="28" width="8" height="16" rx="2" fill="#C9922B"></rect>
+          <line x1="24" y1="42" x2="16" y2="48" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+          <line x1="32" y1="42" x2="40" y2="48" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+          <line x1="28" y1="44" x2="28" y2="50" stroke="#C9922B" stroke-width="2.5" stroke-linecap="round"></line>
+          <ellipse cx="28" cy="20" rx="16" ry="12" fill="#4A6741"></ellipse>
+          <ellipse cx="18" cy="24" rx="8" ry="6" fill="#4A6741"></ellipse>
+          <ellipse cx="38" cy="24" rx="8" ry="6" fill="#4A6741"></ellipse>
+          <ellipse cx="28" cy="14" rx="10" ry="8" fill="#5a7d50"></ellipse>
+        </svg>
+        <div class="nav-logo-text">
+          Zimbabwe
+          <span>Travel &amp; Culture Guide</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="culture.html">Culture &amp; Food</a></li>
+        <li><a href="contact.html">Plan Your Trip</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Page Hero ──────────────────────────────────────────── -->
+  <header class="page-hero" role="banner">
+    <p class="page-hero-eyebrow">Living Traditions</p>
+    <h1>Culture &amp; Cuisine</h1>
+    <p>Discover the music, food, art, and festivals that make Zimbabwe's culture one of Africa's most vibrant.</p>
+  </header>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- Food Section -->
+    <section class="section" id="food" aria-labelledby="food-heading">
+      <div class="container">
+        <p class="eyebrow">Taste of Zimbabwe</p>
+        <h2 class="section-title" id="food-heading">Traditional Cuisine</h2>
+        <hr class="divider">
+        <p class="section-subtitle">Zimbabwean food is hearty, communal, and deeply connected to the land.</p>
+        <div class="food-grid" id="food-grid">
+          <!-- Injected by culture.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="section section-alt" id="music" aria-labelledby="music-heading">
+      <div class="container">
+        <p class="eyebrow">Sound of Zimbabwe</p>
+        <h2 class="section-title" id="music-heading">Music &amp; Dance</h2>
+        <hr class="divider">
+        <p class="section-subtitle">Zimbabwe's musical heritage spans centuries and genres.</p>
+        <div class="music-grid" id="music-grid">
+          <!-- Injected by culture.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Art Section -->
+    <section class="section" id="art" aria-labelledby="art-heading">
+      <div class="container">
+        <p class="eyebrow">Creative Zimbabwe</p>
+        <h2 class="section-title" id="art-heading">Art &amp; Craft</h2>
+        <hr class="divider">
+        <p class="section-subtitle">Zimbabwe has produced some of Africa's most celebrated visual artists.</p>
+        <div class="card-grid" id="art-grid">
+          <!-- Injected by culture.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Festivals Section -->
+    <section class="section section-alt" id="festivals" aria-labelledby="festivals-heading">
+      <div class="container">
+        <p class="eyebrow">Celebrate Zimbabwe</p>
+        <h2 class="section-title" id="festivals-heading">Festivals &amp; Events</h2>
+        <hr class="divider">
+        <p class="section-subtitle">There is always something to celebrate in Zimbabwe.</p>
+        <div class="festival-list" id="festival-list">
+          <!-- Injected by culture.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Did You Know Ticker -->
+    <section class="section section-dark" aria-labelledby="didyouknow-heading">
+      <div class="container did-you-know-wrap">
+        <p class="eyebrow">Did You Know?</p>
+        <h2 class="section-title" id="didyouknow-heading">Zimbabwe Culture Facts</h2>
+        <hr class="divider">
+        <div class="fact-ticker" id="fact-ticker" aria-live="polite">
+          <!-- Injected and cycled by culture.js -->
+        </div>
+        <div class="ticker-controls">
+          <button class="btn btn-outline-ticker" id="prev-fact" aria-label="Previous fact">&#8592; Prev</button>
+          <span class="ticker-index" id="ticker-index"></span>
+          <button class="btn btn-outline-ticker" id="next-fact" aria-label="Next fact">Next &#8594;</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-brand-name">Zimbabwe Guide</p>
+          <p class="footer-brand-desc">A student project celebrating the beauty, culture, and heritage of Zimbabwe. Built for WDD 131 at BYU–Idaho.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="culture.html">Culture &amp; Food</a></li>
+            <li><a href="contact.html">Plan Your Trip</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> Zimbabwe Travel &amp; Culture Guide &mdash; WDD 131 Project</p>
+        <a href="references.html">References &amp; Image Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/home.js"></script>
+  <script src="scripts/culture.js"></script>
+</body>
+</html>
